@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-puts "-----> Starting ruby gem installation"
-ENV['LD_LIBRARY_PATH'] = ARGV[0] + '/vendor/aspell/lib:' + ENV['LD_LIBRARY_PATH']
-ENV['PATH'] = ARGV[0] + 'vendor/aspell/bin:' + ENV['PATH']
+puts "-----> Starting ruby gem installation: #{ARGV[0]}"
+ENV['LD_LIBRARY_PATH'] = "#{ARGV[0]}/vendor/aspell/lib:#{ENV['LD_LIBRARY_PATH']}"
+ENV['PATH'] = "#{ARGV[0]}/vendor/aspell/bin:#{ENV['PATH']}"
 system("echo $PATH")
 system("echo $LD_LIBRARY_PATH")
 
